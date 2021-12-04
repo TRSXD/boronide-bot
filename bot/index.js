@@ -1,5 +1,6 @@
 const { Client, Intents } = require('discord.js');
 const fetch = require('cross-fetch');
+
 const main = require('../src/index');
 const config = require('../config.json');
 
@@ -19,7 +20,7 @@ let settings = {
     'AntiTamper': true,
     'MaximumSecurity': true,
     'UseSuperops': false
-}
+};
 
 const client = new Client({
     intents: [
@@ -33,8 +34,8 @@ const client = new Client({
 });
 
 client.on('ready', () => {
+    console.log('bot is online');
     client.user.setActivity('-obfuscate', { type: 'LISTENING' });
-    console.log(`boronide bot online`);
 });
 
 client.on('messageCreate', (message) => {
@@ -52,7 +53,6 @@ client.on('messageCreate', (message) => {
 
             if (message.content.includes('```lua')) new_message = message.content.replace(/(```lua)/i, '```');
 
-            // https://stackoverflow.com/questions/24867342/regex-get-string-between-two-strings-that-has-line-breaks
             // https://regexland.com/all-between-specified-characters/
 
             var reg = /(?<=```)[\S\s]*(?=```)/g;
@@ -86,13 +86,11 @@ async function obfuscate(content, message) {
 
     message.channel.send({
         content: 'there u go',
-        files: [
-            obfuscated[0]
-        ]
+        files: [ obfuscated[0] ]
     });
 
     return;
-}
+};
 
 // https://stackoverflow.com/questions/1349404/generate-random-string-characters-in-javascript
 function createID(length) {
@@ -102,9 +100,9 @@ function createID(length) {
 
     for (var i = 0; i < length; i++) {
         result += characters.charAt(Math.floor(Math.random() * charactersLength));
-    }
+    };
    
     return result;
-}
+};
 
 client.login(config.token);
