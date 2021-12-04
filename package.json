@@ -1,0 +1,15 @@
+{
+  "name": "boronide",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bot/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cross-fetch": "^3.1.4",
+    "discord.js": "^13.3.1"
+  }
+}
