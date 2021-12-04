@@ -62,9 +62,9 @@ client.on('messageCreate', (message) => {
                 obfuscate(code.toString(), message);
             } else {
                 message.channel.send('no file or code block');
-            };
-        };
-    };
+            }
+        }
+    }
 });
 
 async function fetchAndObfuscate(url, message) {
@@ -82,7 +82,7 @@ async function obfuscate(content, message) {
     } catch(err) {
         message.channel.send('failed to obfuscate');
         return;
-    };
+    }
 
     message.channel.send({
         content: 'there u go',
@@ -100,7 +100,7 @@ function createID(length) {
 
     for (var i = 0; i < length; i++) {
         result += characters.charAt(Math.floor(Math.random() * charactersLength));
-    };
+    }
    
     return result;
 };
