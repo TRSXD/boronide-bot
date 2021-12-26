@@ -1,1 +1,0 @@
-Stack[|A|] = Env[XORStringPrim(Chunk['|Const|'][|B|])];

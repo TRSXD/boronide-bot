@@ -1,1 +1,0 @@
-Stack[|A|]	= (not Stack[|B|]);

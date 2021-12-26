@@ -1,1 +1,0 @@
-Stack[|A|] = "hf_test";

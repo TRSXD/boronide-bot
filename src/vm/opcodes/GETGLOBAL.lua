@@ -1,1 +1,0 @@
-Stack[|A|] = Env[Chunk['|Const|'][|B|]]
